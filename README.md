@@ -94,4 +94,6 @@ source activate test-env
 - 同様の手順で実行し、「This is Python」と表示されればOKです
 ![9](img/9.png)
 
-## 
+## gitで変更をコミットしてみよう
+- 先ほど、リポジトリ内でファイルを編集しました
+- ```git status```コマンドを実行してみましょう
