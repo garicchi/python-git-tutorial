@@ -8,6 +8,22 @@
 - PyCharm
 - Git for Windows
 
+## gitlabのアカウントを作成しよう
+- がんばれ当日の俺
+
+## リモートリポジトリを作成しよう
+- GitLabにログインします
+- [Projects]タブに移動し、[New project]ボタンを押します
+![14](img/14.png)
+
+- Project nameを```python-git-tutorial```とし、Create projectボタンを押します
+- Visiblity Levelはpublicが望ましいです
+![15](img/15.png)
+
+- リモートリポジトリを作成できました
+- URLが記載してある部分のSSHでHTTPSを選択したときに表示されるURLがリモートリポジトリのURLになります
+![16](img/16.png)
+
 ## リポジトリをクローンしよう
 - リモートサーバーにあるリポジトリを自分のローカルリポジトリへコピーすることをクローンと言います
 - ```git clone {リモートリポジトリのURL}```でクローンできます
@@ -22,7 +38,7 @@ mkdir projects
 # 作業ディレクトリへ移動
 cd projects
 # リポジトリをclone
-git clone https://garicchi@gitlab.com/nist-lab/python-git-tutorial.git
+git clone {リモートリポジトリのURL}
 # リポジトリへ移動
 cd python-git-tutorial
 ```
@@ -66,7 +82,25 @@ source activate test-env
 - OKを押す
 ![3](img/3.png)
 
-## 実行してみよう
+## Pythonスクリプトを作成して書こう
+- Pythonスクリプトを新しく作成します
+- python-git-tutorialフォルダを右クリックして[New]>[Python file]を選択します
+![17](img/17.png)
+
+- ```1-hello.py```と入力し、OKを押します
+
+![18](img/18.png)
+
+- 作成された```1-hello.py```ファイルに以下のコードを記載しましょう
+
+```py
+if __name__ == '__main__':
+    print('This is Python')
+```
+
+![19](img/19.png)
+
+## 実行しよう
 - ```1-hello.py```を実行してみよう
 - 右上の三角形(下図参照)から[Edit Configurations...]を選択します
 ![4](img/4.png)
@@ -133,3 +167,25 @@ git commit -m "fix 1-hello"
 ```
 - コミットが完了しました
 ![13](img/13.png)
+
+## リモートリポジトリへプッシュしよう
+- 先ほどのコミットはローカルリポジトリにコミットしたもので、まだリモートリポジトリへは反映されていません
+- ```git push```コマンドによってリモートリポジトリにプッシュしましょう
+- エラーが出なければ成功です
+![20](img/20.png)
+
+- GitLabのページを更新すると、コミットしたソースコードの変更が反映されていることがわかります
+
+![21](img/21.png)
+
+## チャレンジ！
+- では同じリポジトリに```2-loop.py```というファイルを作成して0～10のsin波の値を表示してみましょう
+- 完成した表示はこんな感じ
+
+![22](img/22.png)
+
+### ヒント
+- sinの値を表示するにはnumpyというライブラリのsin関数を使用する必要がある
+- numpyライブラリを使用するには```pip install numpy```というコマンドをgit bashにうってインストールする必要がある
+- 0～10までをforループをするには```for i in range(0,10):```
+
