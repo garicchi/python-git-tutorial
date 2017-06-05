@@ -90,3 +90,8 @@ source activate test-env
 - Hello,World!と表示されればOKです
 
 ## 表示される文章を変えてみよう
+- 現在、Hello,Worldと表示されているが1-hello.pyを編集して「This is Python」と表示するようにします
+- 同様の手順で実行し、「This is Python」と表示されればOKです
+![9](img/9.png)
+
+## 
